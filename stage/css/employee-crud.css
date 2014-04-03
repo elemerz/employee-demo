@@ -1,0 +1,105 @@
+/*** Helper classes***/
+.cf:before,.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+html *{
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*** Employee List***/
+.employees{
+	width: 25%;
+	margin: 1em;
+}
+.employees header{
+	background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
+}
+.employees h2{
+	float:left;
+	margin:0;
+	padding:.25em;
+	font-weight:bold;
+	color:#fff;
+	width:calc(100% - 32px);
+}
+.employees>ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	border: 1px solid black;
+}
+.employees>ul li:nth-child(2n-1) {
+	background-color: #ddd;
+}
+.employees.editing li{
+	opacity:.4;
+}
+.employees.editing li.editor{
+	opacity:1;
+}
+
+.employees .toolbar{
+	float:right;
+	padding-top:.45em;
+}
+.employees .toolbar button {
+	float:left;
+	width: 28px;
+	height: 28px;
+	margin-left:8px;
+	background: #ccc url("../img/action-icons.png") no-repeat 0 0;
+	cursor:pointer;
+}
+.employees.editing .toolbar button {
+	cursor:no-drop;
+}
+.employees.editing .editor .toolbar button {
+	cursor:pointer;
+}
+.employees .toolbar button:first-child {
+	margin-left:0;
+}
+.employees .toolbar button.edit {
+	background-position: 0 -74px;
+}
+.employees .toolbar button.delete {
+	background-position: 0 -148px;
+}
+
+/*** Employee Editor***/
+
+.employees >ul li.editor{
+	background-color:#d9d9d9; 
+}
+.editor header{
+	margin:0;
+	padding:0;
+}
+.editor h2{
+	width:calc(100% - 104px);
+}
+.editor .toolbar button.save{
+	background-position: 0 -222px;
+}
+.editor .toolbar button.reset{
+	background-position: 0 -296px;
+}
+.editor .toolbar button.cancel{
+	background-position: 0 -370px;
+}
+.editor .row {
+	margin:.25em;
+	padding:.25 0;
+	border-bottom: 1px solid #b1b1b1;
+}
+.editor .row label,
+.editor .row .field{
+	float:left;
+	width:50%;
+}

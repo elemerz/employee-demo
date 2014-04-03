@@ -1,0 +1,22 @@
+<li data-id="{id}" data-mode="{mode}" class="editor cf" tabindex="-1">
+	<header class="cf">
+		<h2>{@eq key="{action}" value="change"}Edit {name},{vorname}{/eq}{@eq key="{action}" value="add"}Add Employee{/eq}</h2>
+		<section class="toolbar cf">
+			<button class="save" data-default="true"></button>
+			<button class="reset"></button>
+			<button class="cancel"></button>
+		</section>
+	</header>
+	<form class="props" action="#">
+		<div class="row cf"><label for="empName">Name:</label><input autofocus="true" id="empName" class="field name" value="{name}" data-bindto="name" required/></div>
+		<div class="row cf"><label for="empVorname">Lastname:</label><input id="empVorname" class="field vorname" value="{vorname}" data-bindto="vorname"/></div>
+		<div class="row cf">
+			<label for="empRole">Role:</label>
+			<select id="empRole" class="field role" data-bindto="role">
+				<option value="Developer" {@eq key="{role}" value="Developer"}selected="selected"{/eq}>Developer</option>
+				<option value="Tester" {@eq key="{role}" value="Tester"}selected="selected"{/eq}>Tester</option>
+				<option value="Director" {@eq key="{role}" value="Director"}selected="selected"{/eq}>Director</option>
+			</select>
+		</div>
+	</form>
+</li>

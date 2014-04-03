@@ -1,0 +1,14 @@
+[
+ {"id":"1","name":"David","vorname":"Ionu\u0163","role":"Developer","mode":"view"},
+ {"id":"2","name":"Z\u00e1goni","vorname":"Elem\u00e9r","role":"Director","mode":"view"},
+ {"id":"3","name":"Pet\u0151","vorname":"Lajos","role":"Developer","mode":"view"},
+ {"id":"4","name":"Danciu","vorname":"Dan","role":"Developer","mode":"view"},
+ {"id":"5","name":"Galea","vorname":"Augustin","role":"Developer","mode":"view"},
+ {"id":"6","name":"Macoviciuc","vorname":"Monica","role":"Developer","mode":"view"},
+ {"id":"7","name":"Berinde","vorname":"R\u0103zvan","role":"Developer","mode":"view"},
+ {"id":"8","name":"R\u0103usanu","vorname":"Silvia","role":"Developer","mode":"view"},
+ {"id":"9","name":"Botez","vorname":"Mircea","role":"Developer","mode":"view"},
+ {"id":"10","name":"Lup","vorname":"Andreea","role":"Developer","mode":"view"},
+ {"id":"11","name":"Terec","vorname":"Bogdan","role":"Tester","mode":"view"},
+ {"id":"12","name":"Corha","vorname":"Timeia","role":"Tester","mode":"view"}
+]
