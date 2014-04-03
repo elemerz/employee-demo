@@ -3,7 +3,7 @@ Be sure you have:
  -node installed on your computer
  -bower installed (npm install bower) 
 
-#register a bower package
+#register a NEW bower package
   bower register YourAwesomePackageName git://github.com/yourGitHubUsername/YourAwesomePackageName.git
   
 #release a new version
