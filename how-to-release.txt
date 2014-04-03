@@ -1,0 +1,21 @@
+Be sure you have:
+ -a github public repo with your project
+ -node installed on your computer
+ -bower installed (npm install bower) 
+
+#register a bower package
+  bower register YourAwesomePackageName git://github.com/yourGitHubUsername/YourAwesomePackageName.git
+  
+#release a new version
+
+# commit your changes
+git commit -am "Made some awesome new changes, now its even awesomer"
+
+# tag the commit
+git tag -a v0.0.2 -m "Release version 0.0.2"
+
+# push to GitHub
+git push origin master --tags
+
+#get info about the package
+bower info employee-demo 
