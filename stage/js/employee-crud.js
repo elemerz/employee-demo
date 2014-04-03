@@ -15,10 +15,7 @@
 	  init : function() {
 		  var $d = $(document);
 
-		  $d.on('click', '#btnLoadEmployees', {
-			  url : 'stage/data/db/employees.json'
-		  }, $.proxy(this.loadEmployees, this));
-
+		  $d.on('click', 'section:not(.editing) .toolbar button.load', {url : 'stage/db/employees.json'}, $.proxy(this.loadEmployees, this));
 		  $d.on('click', 'section:not(.editing) .toolbar button.add', $.proxy(this.addNew, this));
 		  $d.on('click', 'section:not(.editing) .toolbar button.edit', $.proxy(this.openEditor, this));
 		  $d.on('click', 'section:not(.editing) .toolbar button.delete', $.proxy(this.delete, this).intercept(this.askForConfirmation, this,this.i18n.lblDeleteConfirmation));
@@ -33,7 +30,7 @@
 	  preloadTemplates : function(arrTmplnames) {
 		  var self = this, view = arrTmplnames.shift(), loadView = function(view) {
 			  var $node = $('<div id="temp-' + ("" + Math.random()).substr(2) + '"></div>');
-			  $node.load('stage/data/view/{view}.html'.tmpl({
+			  $node.load('stage/view/{view}.html'.tmpl({
 				  view : view
 			  }), function(txt) {
 				  self.viewTemplates[view] = txt;
@@ -120,10 +117,10 @@
 	  },
 	  
 	  /** Called right after editor has been closed. */
-	  onEditorClosed: function(){
-	  	console.log('Editor closed.');
-	  	$('.employees').removeClass('editing');
-	  },
+		onEditorClosed: function(){
+			console.log('Editor closed.');
+			$('.employees').removeClass('editing');
+		},
 	  
 	  /** Executes the default action in editor. (The button having data-default attribute present) */
 	  doDefaultEditorAction : function(e) {
@@ -169,10 +166,10 @@
 			  });
 		  } else {
 			  $editor.rerender({
-			    'view' : 'employee-view',
-			    'model' : model,
-			    'mode' : 'replaceWith',
-		    	'onAfter':this.onEditorClosed
+					'view' : 'employee-view',
+					'model' : model,
+					'mode' : 'replaceWith',
+					'onAfter':this.onEditorClosed
 			  });
 		  }
 	  },

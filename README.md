@@ -1,2 +1,1 @@
-employee-demo
-=============
+CRUD demo application with Dust.

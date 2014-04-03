@@ -26,7 +26,7 @@ html *{
 	padding:.25em;
 	font-weight:bold;
 	color:#fff;
-	width:calc(100% - 32px);
+	width:calc(100% - 64px);
 }
 .employees>ul{
 	margin:0;
@@ -64,6 +64,9 @@ html *{
 }
 .employees .toolbar button:first-child {
 	margin-left:0;
+}
+.employees .toolbar button.load {
+	background-position: 0 -444px;
 }
 .employees .toolbar button.edit {
 	background-position: 0 -74px;
