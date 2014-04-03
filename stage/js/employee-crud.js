@@ -22,7 +22,7 @@
 		  $d.on('click', '.editor button.save', $.proxy(this.saveChanges, this));
 		  $d.on('click', '.editor button.reset', $.proxy(this.resetChanges, this));
 		  $d.on('click', '.editor button.cancel', $.proxy(this.cancelChanges, this));
-		  $d.on('keypress', '.editor', $.proxy(this.doDefaultEditorAction, this));
+		  $d.on('keyup', '.editor', $.proxy(this.doDefaultEditorAction, this));
 
 		  this.preloadTemplates([ 'employees', 'employee-view', 'employee-edit' ]);
 	  },
@@ -124,9 +124,12 @@
 	  
 	  /** Executes the default action in editor. (The button having data-default attribute present) */
 	  doDefaultEditorAction : function(e) {
-		  if (e.ctrlKey && e.keyCode === 13) {
-			  $(e.target).closest('.editor').find('[data-default]').trigger('click');
-		  }
+		  var $editor=$(e.target).closest('.editor');
+			if (e.ctrlKey && e.keyCode === 13) {
+			  $editor.find('[data-default]').trigger('click');
+			}else if(e.keyCode === 27){
+				$editor.find('[data-cancel]').trigger('click');
+			}
 	  },
 	  /** Save button clicked inside editor. */
 	  saveChanges : function(e) {
