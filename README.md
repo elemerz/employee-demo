@@ -1,1 +1,1 @@
-CRUD demo application with Dust.
+CRUD demo application with jQuery and Dust.
