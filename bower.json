@@ -1,0 +1,23 @@
+{
+  "name": "employee-demo",
+  "version": "0.0.1",
+  "homepage": "https://github.com/elemerz/employee-demo",
+  "authors": [
+    "elemer.zagoni <elemer.zagoni@isdc.eu>"
+  ],
+  "description": "ISDC Employee CRUD Demo app.",
+  "main": "index.html",
+  "keywords": [
+    "CRUD",
+    "Ajax",
+    "Dust"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
